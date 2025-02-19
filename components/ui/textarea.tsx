@@ -1,8 +1,14 @@
-import { cn } from "@/lib/utils";
+//多行输入框
+// textarea.tsx
+// Compare this snippet from input.tsx:
+import { cn } from "@/lib/utils"; 
 import { TextareaHTMLAttributes, forwardRef, useEffect, useRef } from "react";
 
-export interface TextareaProps
-  extends TextareaHTMLAttributes<HTMLTextAreaElement> {}
+// 添加额外属性到 TextareaProps 接口
+export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+  // 添加一个可选的自定义属性
+  customProp?: string;
+}
 
 const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className, value, ...props }, ref) => {

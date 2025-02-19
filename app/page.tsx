@@ -1,9 +1,9 @@
 "use client"; // 标记为 Client Component
 
 import { useState, useRef } from "react";
-import ChatInput from "@/components/chat/ChatInput";
-import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+
 
 export default function ChatPage() {
   const [inputValue, setInputValue] = useState(""); // 输入框内容
